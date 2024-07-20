@@ -8,7 +8,7 @@ def organizar_arquivos(limite, arquivos):
             i += 1
             j -= 1
         else:
-            # Caso contrário, apenas o amior arquivo é adicionado na pasta.
+            # Caso contrário, apenas o maior arquivo é adicionado na pasta.
             n_pastas += 1
             j -= 1
 
