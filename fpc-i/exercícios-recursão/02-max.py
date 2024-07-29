@@ -5,7 +5,7 @@ def maior(vetor, i=0):
         # Retorna o único valor do vetor ou o último.
     else:
         maior_atual = maior(vetor, i + 1)
-        # Inicialmente maior atual será o último valor do vetor.
+        # Inicialmente o maior atual será o último valor do vetor.
         if vetor[i] > maior_atual:
             # De trás para frente compara o maior atual com o valor atual até chegar no início do vetor.
             return vetor[i]
