@@ -12,8 +12,8 @@ def central():
     import random
 
     vetor = [random.randint(1, 10000) for _ in range(10000)]
-    novo = quick_sort(vetor)
-    print(novo)
+    vetor_ordenado = quick_sort(vetor)
+    print(vetor_ordenado)
 
 
 if __name__ == '__main__':
