@@ -1,18 +1,17 @@
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
-        chave = arr[i]
-        j = i - 1
-        while j >= 0 and chave < arr[j]:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = chave
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
 
 
 def central():
     import random
-
     vetor = [random.randint(1, 10000) for _ in range(10000)]
-    insertion_sort(vetor)
+    selection_sort(vetor)
     print(vetor)
 
 
