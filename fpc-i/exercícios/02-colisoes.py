@@ -1,4 +1,4 @@
-def colisao():
+def colisoes():
     x0a, y0a, x1a, y1a = [int(x) for x in input().split()]
     x0b, y0b, x1b, y1b = [int(x) for x in input().split()]
 
@@ -11,4 +11,4 @@ def colisao():
 
 
 if __name__ == '__main__':
-    colisao()
+    colisoes()

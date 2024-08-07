@@ -1,6 +1,6 @@
 def f(n, caso, chamadas_recursivas):
     if n == 1:
-        g(True, caso, chamadas_recursivas)
+        g(caso, chamadas_recursivas)
         return 1
     elif n % 2 == 0:
         f(n / 2, caso, chamadas_recursivas + 1)
@@ -8,11 +8,10 @@ def f(n, caso, chamadas_recursivas):
         f(3 * n + 1, caso, chamadas_recursivas + 1)
 
 
-def g(base=False, caso=None, chamadas_recursivas=0):
-    if base:
-        global maiores_valores
-        if chamadas_recursivas > maiores_valores[caso]:
-            maiores_valores[caso] = chamadas_recursivas
+def g(caso=None, chamadas_recursivas=0):
+    global maiores_valores
+    if chamadas_recursivas > maiores_valores[caso]:
+        maiores_valores[caso] = chamadas_recursivas
 
 
 def saida(maiores):
@@ -22,7 +21,7 @@ def saida(maiores):
 
 if __name__ == '__main__':
     t = int(input())
-    intervalos = [[int(x) for x in input().split()] for x in range(t)]
+    intervalos = [[int(x) for x in input().split()] for _ in range(t)]
     maiores_valores = [0] * t
 
     for i, intervalo in enumerate(intervalos):
