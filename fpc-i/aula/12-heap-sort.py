@@ -1,29 +1,29 @@
-def heapsort(a):
-    build_max_heap(a)
-    tamanho_do_heap = len(a)
-    for i in range(len(a) - 1, 0, -1):
-        a[0], a[i] = a[i], a[0]
+def heapsort(arr):
+    build_max_heap(arr)
+    tamanho_do_heap = len(arr)
+    for i in range(len(arr) - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]
         tamanho_do_heap -= 1
-        max_heapify(a, 0, tamanho_do_heap)
+        max_heapify(arr, 0, tamanho_do_heap)
 
 
-def build_max_heap(a):
-    tamanho_do_heap = len(a)
-    for i in range(len(a) // 2 - 1, -1, -1):
-        max_heapify(a, i, tamanho_do_heap)
+def build_max_heap(arr):
+    tamanho_do_heap = len(arr)
+    for i in range(len(arr) // 2 - 1, -1, -1):
+        max_heapify(arr, i, tamanho_do_heap)
 
 
-def max_heapify(a, i, tamanho_do_heap):
+def max_heapify(arr, i, tamanho_do_heap):
     l = 2 * i + 1
     r = 2 * i + 2
     maior = i
-    if l < tamanho_do_heap and a[l] > a[maior]:
+    if l < tamanho_do_heap and arr[l] > arr[maior]:
         maior = l
-    if r < tamanho_do_heap and a[r] > a[maior]:
+    if r < tamanho_do_heap and arr[r] > arr[maior]:
         maior = r
     if maior != i:
-        a[i], a[maior] = a[maior], a[i]
-        max_heapify(a, maior, tamanho_do_heap)
+        arr[i], arr[maior] = arr[maior], arr[i]
+        max_heapify(arr, maior, tamanho_do_heap)
 
 
 def central():

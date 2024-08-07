@@ -1,6 +1,6 @@
 def randomized_quicksort(arr, p, r):
     if p < r:
-        q = partition(arr, p, r)
+        q = randomized_partition(arr, p, r)
         randomized_quicksort(arr, p, q - 1)
         randomized_quicksort(arr, q + 1, r)
 
