@@ -3,10 +3,10 @@ def reverter_saldo(encontrar, saldo):
     maiores_digitos = [None] * encontrar
     maior = float('-inf')
     for d in range(encontrar):
-        # Condição para o caso de faltar mais de um dígito ser encontrado.
         if encontrar - encontrei != 1:
-            # É usado um índice negativo para controlar a janela de análise.
+            # Condição para quando faltar mais de um dígito ser encontrado.
             for digito in saldo[:1 - encontrar + encontrei]:
+                # É usado um índice negativo para controlar a janela de análise.
                 if digito > maior:
                     maior = digito
             maiores_digitos[d] = maior
@@ -14,10 +14,10 @@ def reverter_saldo(encontrar, saldo):
             index = saldo.index(maior)
             saldo = saldo[index + 1:]
             maior = float('-inf')
-        # Condição para o caso de faltar um dígito ser encontrado.
         else:
-            # Não é necessário nenhuma janela.
+            # Condição para quando faltar apenas um dígito ser encontrado.
             for digito in saldo:
+                # Não é necessário nenhuma janela de análise.
                 if digito > maior:
                     maior = digito
             maiores_digitos[d] = maior
