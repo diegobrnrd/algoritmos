@@ -17,22 +17,22 @@ def partition(arr, p, r):
 
 
 def compara(pais1, pais2):
-    criterios_pais1 = (medalhas_paises[pais1][1], medalhas_paises[pais1][2], medalhas_paises[pais1][3], -pais1)
-    criterios_pais2 = (medalhas_paises[pais2][1], medalhas_paises[pais2][2], medalhas_paises[pais2][3], -pais2)
+    criterios_pais1 = (quadro_medalhas[pais1][1], quadro_medalhas[pais1][2], quadro_medalhas[pais1][3], -pais1)
+    criterios_pais2 = (quadro_medalhas[pais2][1], quadro_medalhas[pais2][2], quadro_medalhas[pais2][3], -pais2)
 
     return criterios_pais1 > criterios_pais2
 
 
 if __name__ == '__main__':
     n_paises, n_modalidade = map(int, input().split())
-    modalidades = [[int(x) for x in input().split()] for _ in range(n_modalidade)]
-    medalhas_paises = {x: {1: 0, 2: 0, 3: 0} for x in range(1, n_paises + 1)}
+    modalidades = [[int(m) for m in input().split()] for _ in range(n_modalidade)]
+    quadro_medalhas = {x: {1: 0, 2: 0, 3: 0} for x in range(1, n_paises + 1)}
 
     for modalidade in modalidades:
         for tipo, pais in enumerate(modalidade, 1):
-            medalhas_paises[pais][tipo] += 1
+            quadro_medalhas[pais][tipo] += 1
 
-    paises = list(medalhas_paises.keys())
+    paises = list(quadro_medalhas.keys())
     quicksort(paises, 0, len(paises) - 1)
 
     print(" ".join(map(str, paises)))
