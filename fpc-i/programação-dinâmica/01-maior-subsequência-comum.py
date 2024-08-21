@@ -1,8 +1,9 @@
 def lcs():
-    s = 'ABAZDC'
-    t = 'BACBAD'
+    s = 'BACBAD' # Linha.
+    t = 'ABAZDC' # Coluna.
 
     tab = [[0 for _ in range(len(s) + 1)] for _ in range(len(t) + 1)]
+
     for i in range(1, len(t) + 1):
         for j in range(1, len(s) + 1):
             if t[i - 1] != s[j - 1]:
@@ -23,8 +24,8 @@ def lcs():
             j -= 1
 
     lcs_str = ''.join(lcs_lista)
-    print(lcs_str[::-1])
+    return lcs_str[::-1]
 
 
 if __name__ == '__main__':
-    lcs()
+    print(lcs())
