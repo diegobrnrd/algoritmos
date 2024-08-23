@@ -26,7 +26,6 @@ def contar_navios_destruidos(dict_tamanhos):
 
     return n_navios_destruidos
 
-
 def disparos(tabuleiro, n_disparos, n_linhas, n_colunas):
     identificador = 0
     dict_tamanhos = {}
