@@ -4,7 +4,6 @@ def somar_linhas_colunas(n, quadrado, identificador):
         for i, l in enumerate(quadrado):
             for c in l:
                 soma_das_linhas[i] += c
-
         return soma_das_linhas
 
     else:
@@ -12,7 +11,6 @@ def somar_linhas_colunas(n, quadrado, identificador):
         for l in quadrado:
             for i, c in enumerate(l):
                 soma_das_colunas[i] += c
-
         return soma_das_colunas
 
 
@@ -48,6 +46,7 @@ def funcao_principal():
     valor_alterado = quadrado[linha_errada][coluna_errada]
 
     print(f'{valor_correto} {valor_alterado}')
+
 
 if __name__ == '__main__':
     funcao_principal()
