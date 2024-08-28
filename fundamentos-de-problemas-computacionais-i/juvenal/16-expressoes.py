@@ -18,9 +18,14 @@ def verificacao(string):
 
 def funcao_principal():
     t = int(input())
-    for _ in range(t):
+    s_n = [''] * t
+
+    for i, _ in enumerate(range(t)):
         cadeia = input().strip()
-        print(verificacao(cadeia))
+        s_n[i] = verificacao(cadeia)
+
+    for c in s_n:
+        print(c)
 
 
 if __name__ == '__main__':
