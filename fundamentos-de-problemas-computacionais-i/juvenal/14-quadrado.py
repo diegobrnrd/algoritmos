@@ -32,7 +32,6 @@ def funcao_principal():
         elif contar(soma_das_linhas, soma_das_linhas[l]) == 1:
             linha_errada = l
             soma_errada = soma_das_linhas[l]
-
         elif contar(soma_das_linhas, soma_das_linhas[l]) > 1:
             soma_correta = soma_das_linhas[l]
 
