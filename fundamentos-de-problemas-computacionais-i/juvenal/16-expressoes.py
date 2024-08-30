@@ -32,10 +32,12 @@ def validar_expressao(cadeias, pilha):
     for caractere in cadeias:
         if caractere in correspondente.values():
             pilha.inserir(caractere)
+            # Quando o caractere for um valor do dicionário, ele é adicionado na pilha.
         else:
             caractere_valor = pilha.remover()
             if caractere_valor is None or correspondente[caractere] != caractere_valor.dado:
-            # Verifica se chave e valor são correspondentes.
+            # Quando o caractere for uma chave do dicionário, um caractere é retirado da pilha
+            # e é verificado se o caractere retirado corresponde ao valor esperado.
                 return 'N'
     if pilha.is_vazia():
         return 'S'
