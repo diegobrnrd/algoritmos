@@ -1,32 +1,57 @@
-def verificacao(string):
-    pilha = []
-    oposto = {'{': '}', '[': ']', '(': ')'}
+class No:
+    def __init__(self, dado):
+        self.dado = dado
+        self.proximo = None
 
-    for caractere in string:
-        if caractere in oposto:
-            pilha.append(caractere)
-        elif len(pilha) > 0 and caractere == oposto[pilha[-1]]:
-            pilha.pop()
+class Pilha:
+    def __init__(self):
+        self.topo = None
+
+    def is_vazia(self):
+        return self.topo is None
+
+    def inserir(self, dado):
+        novo_no = No(dado)
+        if self.is_vazia():
+            self.topo = novo_no
         else:
-            return 'N'
+            novo_no.proximo = self.topo
+            self.topo = novo_no
+        return novo_no
 
-    if len(pilha) == 0:
+    def remover(self):
+        if self.is_vazia():
+            return None
+        no_removido = self.topo
+        self.topo = no_removido.proximo
+        return no_removido
+
+
+def validar_expressao(cadeias, pilha):
+    correspondente = {'}': '{', ']': '[', ')': '('}
+    for caractere in cadeias:
+        if caractere in correspondente.values():
+            pilha.inserir(caractere)
+        else:
+            caractere_valor = pilha.remover()
+            if caractere_valor is None or correspondente[caractere] != caractere_valor.dado:
+            # Verifica se chave e valor são correspondentes.
+                return 'N'
+    if pilha.is_vazia():
         return 'S'
     else:
         return 'N'
 
-
-def funcao_principal():
+def principal():
     t = int(input())
-    s_n = [''] * t
+    respostas = [''] * t
+    for i in range(t):
+        cadeias = list(input())
+        pilha = Pilha()
+        respostas[i] = validar_expressao(cadeias, pilha)
 
-    for i, _ in enumerate(range(t)):
-        cadeia = input().strip()
-        s_n[i] = verificacao(cadeia)
-
-    for c in s_n:
-        print(c)
-
+    for resposta in respostas:
+        print(resposta)
 
 if __name__ == '__main__':
-    funcao_principal()
+    principal()
