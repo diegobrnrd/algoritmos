@@ -4,6 +4,7 @@ class No:
         self.proximo = None
         self.anterior = None
 
+
 class ListaDuplamenteEncandeada:
     def __init__(self):
         self.inicio = None
@@ -72,6 +73,7 @@ class ListaDuplamenteEncandeada:
             s += f'{i.dado} '
             i = i.proximo
         return s
+
 
 def principal():
     lista = ListaDuplamenteEncandeada()

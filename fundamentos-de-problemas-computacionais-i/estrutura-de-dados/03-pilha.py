@@ -3,6 +3,7 @@ class No:
         self.dado = dado
         self.proximo = None
 
+
 class Pilha:
     def __init__(self):
         self.topo = None
@@ -34,6 +35,7 @@ class Pilha:
             i = i.proximo
         return s
 
+
 def principal():
     lista = list(range(1, 9))
     pilha = Pilha()
@@ -45,6 +47,7 @@ def principal():
         no_removido = pilha.remover()
         print(f'Estou removendo {" Nada " if no_removido is None else no_removido.dado}')
     print(pilha)
+
 
 if __name__ == '__main__':
     principal()
