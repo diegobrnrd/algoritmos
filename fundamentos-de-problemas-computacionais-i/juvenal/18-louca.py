@@ -22,20 +22,6 @@ class ListaDuplamenteEncandeada:
             novo_no.anterior = self.fim
             self.fim = novo_no
 
-    def inserir_no_inicio(self, dado):
-        novo_no = No(dado)
-        if self.is_vazia():
-            self.inicio = self.fim = novo_no
-        else:
-            novo_no.proximo = self.inicio
-            self.inicio.anterior = novo_no
-            self.inicio = novo_no
-
-    def buscar(self):
-        if self.is_vazia():
-            return None
-        return self.inicio.dado
-
     def remover_inicio(self):
         if self.is_vazia():
             return None
