@@ -24,18 +24,6 @@ class Fila:
             self.fim = novo_no
         return novo_no
 
-    def remover(self):
-        no_removido = self.inicio
-        if self.is_vazia():
-            return None
-        elif self.inicio == self.fim:
-            self.inicio = self.fim = None
-        else:
-            segundo = self.inicio.proximo
-            segundo.anterior = None
-            self.inicio = segundo
-        return no_removido
-
     def remover_pessoa(self, dado):
         atual = self.inicio
         while atual is not None:
