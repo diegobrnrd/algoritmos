@@ -3,6 +3,7 @@ class No:
         self.dado = dado
         self.proximo = None
 
+
 class Pilha:
     def __init__(self):
         self.topo = None
