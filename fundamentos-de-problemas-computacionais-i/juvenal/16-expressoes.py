@@ -36,7 +36,6 @@ class Pilha:
         return s
 
 
-
 def validar_expressao(cadeias, pilha):
     correspondente = {'}': '{', ']': '[', ')': '('}
     for caractere in cadeias:
@@ -54,6 +53,7 @@ def validar_expressao(cadeias, pilha):
     else:
         return 'N'
 
+
 def principal():
     t = int(input())
     respostas = [''] * t
@@ -64,6 +64,7 @@ def principal():
 
     for resposta in respostas:
         print(resposta)
+
 
 if __name__ == '__main__':
     principal()
