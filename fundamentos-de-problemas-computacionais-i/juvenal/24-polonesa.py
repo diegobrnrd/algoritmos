@@ -47,19 +47,15 @@ def avaliar_expressao_prefixa(expressao):
             operando2 = pilha.remover().dado
             if token == '+':
                 resultado = operando1 + operando2
-                pilha.inserir(resultado)
             elif token == '-':
                 resultado = operando1 - operando2
-                pilha.inserir(resultado)
             elif token == '*':
                 resultado = operando1 * operando2
-                pilha.inserir(resultado)
             elif token == '/':
                 resultado = operando1 // operando2
-                pilha.inserir(resultado)
+            pilha.inserir(resultado)
 
     return pilha.remover().dado
-
 
 
 def principal():
