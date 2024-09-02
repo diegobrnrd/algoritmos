@@ -67,7 +67,7 @@ class ListaDuplamenteEncandeada:
         return no_removido
 
     def __str__(self):
-        s = ''
+        s = 'Minha lista está assim: '
         i = self.inicio
         while i is not None:
             s += f'{i.dado} '
