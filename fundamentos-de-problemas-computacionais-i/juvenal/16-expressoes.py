@@ -27,6 +27,15 @@ class Pilha:
         self.topo = no_removido.proximo
         return no_removido
 
+    def __str__(self):
+        s = 'Minha pilha está assim: '
+        i = self.topo
+        while i is not None:
+            s += f'{i.dado} '
+            i = i.proximo
+        return s
+
+
 
 def validar_expressao(cadeias, pilha):
     correspondente = {'}': '{', ']': '[', ')': '('}

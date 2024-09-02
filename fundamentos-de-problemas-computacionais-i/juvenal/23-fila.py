@@ -24,6 +24,18 @@ class Fila:
             self.fim = novo_no
         return novo_no
 
+    def remover(self):
+        no_removido = self.inicio
+        if self.is_vazia():  # A fila está vazia.
+            return None
+        elif self.inicio == self.fim:  # A fila tem 1 elemento.
+            self.inicio = self.fim = None
+        else:  # A fila tem mais de 1 elemento.
+            segundo = self.inicio.proximo
+            segundo.anterior = None
+            self.inicio = segundo
+        return no_removido
+
     def remover_pessoa(self, dado):
         atual = self.inicio
         while atual is not None:

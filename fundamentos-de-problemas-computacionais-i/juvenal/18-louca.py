@@ -33,6 +33,14 @@ class ListaDuplamenteEncandeada:
             self.inicio.anterior = None
         return no_removido.dado
 
+    def __str__(self):
+        s = 'Minha lista está assim: '
+        i = self.inicio
+        while i is not None:
+            s += f'{i.dado} '
+            i = i.proximo
+        return s
+
 
 def jogar(deck_mesa, convidados):
     fila_mesa = ListaDuplamenteEncandeada()

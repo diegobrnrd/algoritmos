@@ -39,6 +39,14 @@ class Fila:
     def primeiro(self):
         return self.inicio
 
+    def __str__(self):
+        s = 'Minha fila está assim: '
+        i = self.inicio
+        while i is not None:
+            s += f'{i.dado} '
+            i = i.proximo
+        return s
+
 
 def principal():
     n_casos_teste = int(input())
