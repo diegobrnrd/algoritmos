@@ -25,7 +25,7 @@ class Pilha:
             return None
         no_removido = self.topo
         self.topo = no_removido.proximo
-        return no_removido
+        return no_removido.dado
 
     def __str__(self):
         s = 'Minha pilha está assim: '
@@ -44,7 +44,7 @@ def validar_expressao(cadeias, pilha):
             # Quando o caractere for um valor do dicionário, ele é adicionado na pilha.
         else:
             caractere_valor = pilha.remover()
-            if caractere_valor is None or correspondente[caractere] != caractere_valor.dado:
+            if caractere_valor is None or correspondente[caractere] != caractere_valor:
             # Quando o caractere for uma chave do dicionário, um caractere é retirado da pilha
             # e é verificado se o caractere retirado corresponde ao valor esperado.
                 return 'N'

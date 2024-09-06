@@ -25,7 +25,7 @@ class Pilha:
             return None
         no_removido = self.topo
         self.topo = no_removido.proximo
-        return no_removido
+        return no_removido.dado
 
     def __str__(self):
         s = 'Minha pilha está assim: '
@@ -43,8 +43,8 @@ def avaliar_expressao_prefixa(expressao):
         if token.isdigit():
             pilha.inserir(int(token))
         else:
-            operando1 = pilha.remover().dado
-            operando2 = pilha.remover().dado
+            operando1 = pilha.remover()
+            operando2 = pilha.remover()
             if token == '+':
                 resultado = operando1 + operando2
             elif token == '-':
@@ -55,7 +55,7 @@ def avaliar_expressao_prefixa(expressao):
                 resultado = operando1 // operando2
             pilha.inserir(resultado)
 
-    return pilha.remover().dado
+    return pilha.remover()
 
 
 def principal():
