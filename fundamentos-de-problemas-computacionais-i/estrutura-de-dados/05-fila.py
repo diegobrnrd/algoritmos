@@ -36,6 +36,11 @@ class Fila:
             self.inicio = segundo
         return no_removido
 
+    def consultar_primeiro_elemento(self):
+        if self.is_vazia():
+            return None
+        return self.inicio.dado
+
     def __str__(self):
         s = 'Minha fila está assim: '
         i = self.inicio
@@ -57,6 +62,7 @@ def principal():
         print(f'Estou removendo {" Nada " if no_removido is None else no_removido.dado}')
     print(fila)
 
+    print(f'O primeiro elemento da fila é: {fila.consultar_primeiro_elemento()}')
 
 if __name__ == '__main__':
     principal()

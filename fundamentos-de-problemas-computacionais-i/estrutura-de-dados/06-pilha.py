@@ -27,6 +27,11 @@ class Pilha:
         self.topo = no_removido.proximo
         return no_removido
 
+    def consultar_elemento_do_topo(self):
+        if self.is_vazia():
+            return None
+        return self.topo.dado
+
     def __str__(self):
         s = 'Minha pilha está assim: '
         i = self.topo
@@ -47,6 +52,8 @@ def principal():
         no_removido = pilha.remover()
         print(f'Estou removendo {" Nada " if no_removido is None else no_removido.dado}')
     print(pilha)
+
+    print(f'O elemento do topo da pilha é: {pilha.consultar_elemento_do_topo()}')
 
 
 if __name__ == '__main__':
