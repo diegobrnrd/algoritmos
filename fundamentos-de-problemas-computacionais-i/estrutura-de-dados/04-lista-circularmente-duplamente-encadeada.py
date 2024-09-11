@@ -67,7 +67,6 @@ class ListaCircularDuplamenteEncadeada:
 
         return no_removido
 
-
     def alterar(self, dado_antigo, novo_dado):
         no = self.buscar(dado_antigo)
         if no is None:

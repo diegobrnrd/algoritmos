@@ -64,5 +64,6 @@ def principal():
 
     print(f'O primeiro elemento da fila é: {fila.consultar_primeiro_elemento()}')
 
+
 if __name__ == '__main__':
     principal()

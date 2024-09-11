@@ -71,7 +71,6 @@ class ListaEncandeada:
         no.dado = novo_dado
         return novo_dado
 
-
     def __str__(self):
         s = 'Minha lista está assim: '
         i = self.inicio
