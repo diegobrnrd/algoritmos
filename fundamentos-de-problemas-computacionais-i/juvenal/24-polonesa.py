@@ -52,7 +52,7 @@ def avaliar_expressao_prefixa(expressao):
             elif token == '*':
                 resultado = operando1 * operando2
             elif token == '/':
-                resultado = operando1 // operando2
+                resultado = int(operando1 / operando2)
             pilha.inserir(resultado)
 
     return pilha.remover()
