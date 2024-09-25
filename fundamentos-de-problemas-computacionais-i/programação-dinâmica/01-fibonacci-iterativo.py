@@ -1,4 +1,4 @@
-def fibonacci_interativo(n):
+def fibonacci_iterativo(n):
     if n <= 1:
         return n
     else:
@@ -11,4 +11,4 @@ def fibonacci_interativo(n):
 
 
 if __name__ == '__main__':
-    print(fibonacci_interativo(int(input())))
+    print(fibonacci_iterativo(int(input())))
