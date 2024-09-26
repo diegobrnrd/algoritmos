@@ -1,3 +1,3 @@
 # algoritmos
  
-Repositório contendo os códigos desenvolvidos nas disciplinas de **Fundamentos de Problemas Computacionais I** e **II**.
+Repositório destinado aos códigos desenvolvidos nas disciplinas de **Fundamentos de Problemas Computacionais I** e **II**.
